@@ -1,6 +1,6 @@
 -- Question 1 Achieving 1NF (First Normal Form) 🛠️
--- To achieve First Normal Form (1NF), we need to ensure that each field contains only atomic (indivisible) values. In your ProductDetail table, the Products column contains comma-separated values, which violates 1NF.
--- We can achieve 1NF by splitting the Products column into separate rows for each product. Here's how you can do it:
+-- To achieve First Normal Form (1NF), we need to ensure that each field contains only atomic (indivisible) values. In our ProductDetail table, the Products column contains comma-separated values, which violates 1NF.
+-- We can achieve 1NF by splitting the Products column into separate rows for each product. Here's how i can do it:
 
 SELECT 101 AS OrderID, 'John Doe' AS CustomerName, 'Laptop' AS Product
 UNION ALL
@@ -26,7 +26,7 @@ OrderID | CustomerName | Product
 
 -- Question 2 Achieving 2NF (Second Normal Form) 🧩
 -- in our table, the primary key is (OrderID, Product), and CustomerName depends only on OrderID, which violates 2NF.
--- To achieve 2NF, we need to separate the data into two tables: one for Orders and one for Products. Here's how you can do it:
+-- To achieve 2NF, i need to separate the data into two tables: one for Orders and one for Products. Here's how i can do it:
 -- 1. Create the Orders table with OrderID and CustomerName.
 
 CREATE TABLE Orders (
